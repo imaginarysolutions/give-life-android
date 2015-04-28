@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorPrimary">#8A0707</color>
+    <color name="colorPrimaryDark">#640000</color>
+    <color name="colorAccent">#AB2020</color>
+
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_blood_type">Blood type</string>
+    <string-array name="pref_blood_type_titles">
+        <item>O+</item>
+        <item>O–</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="pref_blood_type_values">
+        <item>o-negative</item>
+        <item>o-positive</item>
+        <item>a-positive</item>
+        <item>a-negative</item>
+        <item>b-positive</item>
+        <item>b-negative</item>
+        <item>ab-positive</item>
+        <item>ab-negative</item>
+    </string-array>
+
+    <string name="pref_title_gender">Gender</string>
+    <string-array name="pref_gender_titles">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="pref_gender_values">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_blood_type_critical_notifications">Enable critical notifications</string>
+    <string name="pref_description_blood_type_critical_notifications">Notify me when my blood type supply is critical in the local blood bank
+    </string>
+
+</resources>

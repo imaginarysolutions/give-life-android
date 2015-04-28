@@ -12,7 +12,6 @@ buildscript {
     }
 }
 
-
 // Manifest version information!
 def versionMajor = 1
 def versionMinor = 0
@@ -53,10 +52,10 @@ android {
 }
 
 dependencies {
-    compile 'com.parse.bolts:bolts-android:1.2.0'
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.parse.bolts:bolts-android:1.2.0'
+    compile 'com.android.support:appcompat-v7:22.1.0'
 }
 
 parse {
