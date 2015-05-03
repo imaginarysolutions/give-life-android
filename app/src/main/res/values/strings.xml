@@ -6,4 +6,16 @@
     <string name="make_appointment">Make an appointment</string>
 
     <string name="timeline_empty">No tweets found</string>
+
+    <string-array name="appointments">
+        <item>KUTINA, Petrokemija, Al.Vukovar 4</item>
+        <item>CK ZAGREB, Kineziološki fakultet, Horvaćanski zavoj bb</item>
+        <item>HZTM, Zavod, Petrova 3</item>
+        <item>KUTINA, Petrokemija, Al.Vukovar 4</item>
+        <item>CK ZAGREB, Kineziološki fakultet, Horvaćanski zavoj bb</item>
+        <item>HZTM, Zavod, Petrova 3</item>
+        <item>KUTINA, G.A., S.Radića 3</item>
+        <item>POŽEGA, G.A., Osječka 12</item>
+        <item>CK ZAGREB, FER, Unska 3	</item>
+    </string-array>
 </resources>

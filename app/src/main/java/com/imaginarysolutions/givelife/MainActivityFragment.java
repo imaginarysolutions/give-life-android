@@ -15,6 +15,7 @@ import com.parse.SaveCallback;
 public class MainActivityFragment extends Fragment {
 
     public MainActivityFragment() {
+        // Required empty public constructor
     }
 
     public static MainActivityFragment newInstance() {

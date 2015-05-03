@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         private final String[] TITLES = {"Schedule", "Home", "Twitter", "FAQ"};
 
         private final Fragment[] FRAGMENTS = {
-                MainActivityFragment.newInstance(),
+                ScheduleFragment.newInstance(),
                 MainActivityFragment.newInstance(),
                 TwitterTimelineFragment.newInstance(TWITTER_QUERY),
                 MainActivityFragment.newInstance()

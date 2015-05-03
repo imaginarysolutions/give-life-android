@@ -13,6 +13,10 @@ public class TwitterTimelineFragment extends ListFragment {
 
     public static final String ARG_QUERY = "arg_query";
 
+    public TwitterTimelineFragment() {
+        // Required empty public constructor
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

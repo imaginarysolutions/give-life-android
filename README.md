@@ -23,6 +23,7 @@ This project uses many open source libraries such as:
 
 * [ButterKnife](https://github.com/JakeWharton/butterknife)
 * [PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)
+* [AndroidSlidingUpPanel](https://github.com/umano/AndroidSlidingUpPanel)
 
 ## Contributing
 
