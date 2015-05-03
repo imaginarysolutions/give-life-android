@@ -23,7 +23,9 @@ import butterknife.InjectView;
 public class MainActivity extends AppCompatActivity {
 
     private static final int START_PAGE_INDEX = 1;
-    
+
+    private static final String TWITTER_QUERY = "#giveblood OR #blooddonation OR #darivanjekrvi OR #petrova3 OR #transfusion";
+
     @InjectView(R.id.toolbar)
     Toolbar toolbar;
     @InjectView(R.id.tabs)
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         private final Fragment[] FRAGMENTS = {
                 MainActivityFragment.newInstance(),
                 MainActivityFragment.newInstance(),
-                MainActivityFragment.newInstance(),
+                TwitterTimelineFragment.newInstance(TWITTER_QUERY),
                 MainActivityFragment.newInstance()
         };
 

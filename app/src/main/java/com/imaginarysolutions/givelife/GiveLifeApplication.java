@@ -7,6 +7,10 @@ import com.parse.ParseACL;
 import com.parse.ParseCrashReporting;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+
+import io.fabric.sdk.android.Fabric;
 
 public class GiveLifeApplication extends Application {
 
@@ -24,7 +28,6 @@ public class GiveLifeApplication extends Application {
         // Add your initialization code here
         Parse.initialize(this);
 
-
         ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
         // Optionally enable public read access.
@@ -37,5 +40,9 @@ public class GiveLifeApplication extends Application {
         if (BuildConfig.DEBUG) {
             Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
         }
+
+        // Setup Twitter Fabric
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(BuildConfig.TWITTER_KEY, BuildConfig.TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
     }
 }

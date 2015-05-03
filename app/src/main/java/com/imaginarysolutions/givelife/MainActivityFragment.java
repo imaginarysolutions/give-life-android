@@ -12,9 +12,6 @@ import com.parse.ParsePush;
 import com.parse.SaveCallback;
 
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class MainActivityFragment extends Fragment {
 
     public MainActivityFragment() {

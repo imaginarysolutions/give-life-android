@@ -9,9 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-/**
- * Created by krebernisak on 25/04/15.
- */
 public class SettingsActivity extends AppCompatActivity {
 
     @Override

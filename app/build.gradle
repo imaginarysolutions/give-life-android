@@ -1,14 +1,22 @@
 apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 apply plugin: 'com.parse'
 
 buildscript {
     repositories {
         jcenter()
-        jcenter { url 'https://maven.parse.com/repo' }
+        maven { url 'https://maven.parse.com/repo' }
+        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath 'com.parse.tools:gradle:1.+'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 
@@ -20,7 +28,6 @@ def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
 def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm'Z'", TimeZone.getTimeZone("UTC"))
-
 
 android {
     compileSdkVersion 22
@@ -37,6 +44,9 @@ android {
         buildConfigField "String", "GIT_SHA", "\"${gitSha}\""
         buildConfigField "String", "BUILD_TIME", "\"${buildTime}\""
 
+        buildConfigField "String", "TWITTER_KEY", "\"${twitterKey}\""
+        buildConfigField "String", "TWITTER_SECRET", "\"${twitterSecret}\""
+
         resValue "string", "parse_app_id", parseAppId
         resValue "string", "parse_client_key", parseClientKey
     }
@@ -49,6 +59,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
 }
 
 dependencies {
@@ -60,6 +73,10 @@ dependencies {
 
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
     compile 'com.jakewharton:butterknife:6.1.0'
+
+    compile('com.twitter.sdk.android:twitter:1.4.0@aar') {
+        transitive = true;
+    }
 }
 
 parse {

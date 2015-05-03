@@ -4,4 +4,6 @@
     <string name="action_settings">Settings</string>
 
     <string name="make_appointment">Make an appointment</string>
+
+    <string name="timeline_empty">No tweets found</string>
 </resources>
