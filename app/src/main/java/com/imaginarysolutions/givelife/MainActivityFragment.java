@@ -20,6 +20,11 @@ public class MainActivityFragment extends Fragment {
     public MainActivityFragment() {
     }
 
+    public static MainActivityFragment newInstance() {
+        MainActivityFragment fragment = new MainActivityFragment();
+        return fragment;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

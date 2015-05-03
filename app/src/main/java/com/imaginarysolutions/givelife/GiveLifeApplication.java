@@ -10,31 +10,32 @@ import com.parse.ParseUser;
 
 public class GiveLifeApplication extends Application {
 
-  @Override
-  public void onCreate() {
-      super.onCreate();
 
-      // Initialize Crash Reporting.
-      ParseCrashReporting.enable(this);
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-      // Enable Local Datastore.
-      Parse.enableLocalDatastore(this);
+        // Initialize Crash Reporting.
+        ParseCrashReporting.enable(this);
 
-      // Add your initialization code here
-      Parse.initialize(this);
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        // Add your initialization code here
+        Parse.initialize(this);
 
 
-      ParseUser.enableAutomaticUser();
-      ParseACL defaultACL = new ParseACL();
-      // Optionally enable public read access.
-      // defaultACL.setPublicReadAccess(true);
-      ParseACL.setDefaultACL(defaultACL, true);
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+        // Optionally enable public read access.
+        // defaultACL.setPublicReadAccess(true);
+        ParseACL.setDefaultACL(defaultACL, true);
 
-      // Save the current Installation to Parse.
-      ParseInstallation.getCurrentInstallation().saveInBackground();
+        // Save the current Installation to Parse.
+        ParseInstallation.getCurrentInstallation().saveInBackground();
 
-      if (BuildConfig.DEBUG) {
-          Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
-      }
-  }
+        if (BuildConfig.DEBUG) {
+            Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
+        }
+    }
 }
